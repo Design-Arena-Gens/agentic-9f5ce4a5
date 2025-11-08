@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: #ffffff;
+}
+
+body {
+  @apply font-sans bg-white text-night; 
+  margin: 0;
+}
+
+a {
+  @apply text-accent underline decoration-transparent transition-[color,decoration] duration-200;
+}
+
+a:hover {
+  @apply decoration-accent;
+}
+
+.grid-divider {
+  background-image: linear-gradient(rgba(16, 18, 24, 0.08) 1px, transparent 1px);
+  background-size: 100% 72px;
+}
+
+.surface {
+  @apply bg-white shadow-layer border border-night/10;
+}
+
+.section-title {
+  @apply text-xs tracking-[0.3em] uppercase text-night/60;
+}
+
+.badge {
+  @apply text-xs uppercase tracking-[0.28em] border border-night/20 px-4 py-2;
+}
+
+.tagstrip {
+  @apply flex gap-2 items-center text-[11px] uppercase tracking-[0.24em] text-night/50;
+}
+
+label {
+  @apply text-[11px] uppercase tracking-[0.24em] text-night/60;
+}
+
+input, select {
+  @apply w-full border border-night/20 bg-white text-night text-sm px-4 py-3 tracking-wide uppercase focus:outline-none focus:border-night/40;
+}
+
+input::placeholder {
+  @apply text-night/30;
+}
+
+button {
+  @apply uppercase tracking-[0.32em] text-xs border border-night/95 text-night px-6 py-3 bg-white hover:bg-night hover:text-white transition-colors duration-200;
+}
+
+button.primary {
+  @apply bg-night text-white hover:bg-accent hover:text-white;
+}
